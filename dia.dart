@@ -215,7 +215,7 @@ gl<strike>hf</strike></div>
 		<div class="entrywrap">
 
 			<div class="message">ive been sooooooo busy sorry guys LMAO<br>
-it has been so fun tho<br>
+it has been so fun tho<br>1a1a1a1a1a1a1a1a1a1a1a1a
 can't believe its already more than halfway through the term (caltech does trimesters)<br>
 i barely survived midterms!!<br>
 <br>
