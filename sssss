@@ -1,0 +1,886 @@
+Delivered-To: lukaisthekingofgods@gmail.com
+Received: by 2002:a05:6400:218:b0:28c:c608:69d6 with SMTP id hu24csp455463ecb;
+        Tue, 29 Apr 2025 11:10:21 -0700 (PDT)
+X-Google-Smtp-Source: AGHT+IHJLTmGhA7LMmof7N7XkTanURxz127Zlvp1fVh+MovoP/iNEevWayNHv+qsiOFjlDfjkTFS
+X-Received: by 2002:a05:6902:e04:b0:e73:192b:2963 with SMTP id 3f1490d57ef6-e73eaadb162mr206035276.14.1745950221505;
+        Tue, 29 Apr 2025 11:10:21 -0700 (PDT)
+ARC-Seal: i=1; a=rsa-sha256; t=1745950221; cv=none;
+        d=google.com; s=arc-20240605;
+        b=Cfdw27ubcnxMClJ6LDzkS9tWgOP2gIPw5DTMr0bSjgl0PLO4HP5+EbJtz7OydeRg5f
+         xx3TfQ6QImfEORB1TlFyUqCB0KN5KOo8gc+NjwLqG5XI/jbIA+CHPYavrDLRfeHQIigj
+         a6su52jQ5guXPFbcZDQN77ZclG1ICtnq1kM2MQmx2Dnk4TnxaXl3VvJ5kLMvopucWtot
+         ogwVYdUYV2RQK66bLRub9oWgIOMd0EqvxUIvi3gAM6qBvleq8+xe6J+6P/ERuEvy2gZC
+         YtDyxw9U+Y36Ap5gh4+esQilkBXE7PQ9AJPiOZVefnUNPbAI1ND9EugBfEIKCaxFJ55j
+         0W+g==
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed; d=google.com; s=arc-20240605;
+        h=mime-version:list-unsubscribe-post:list-unsubscribe:list-id
+         :feedback-id:message-id:date:to:reply-to:from:subject:dkim-signature
+         :dkim-signature;
+        bh=AjwoWtkf+Sw30+HZ0c+N9ZZsMZd7T+yxKpo62xQ3gO0=;
+        fh=CRPer20G38Qij+zcXtOQo0EKDJzFRsZGZn7HQF3o++s=;
+        b=SE0jQpgkHUeOj+TbE+GK8PslxDHXfXb5076LgSGyhCLv8JXHR/ZvYz9SYgM+B7hlp7
+         nj9f+sn/7AxOIaAUj3r1tKQlFHOT35B6uIqi+eOnC7bGL1yuAlxr0qexg43ucffNnedl
+         coZvEYKHOB0Il2rwpFGbvjgx/6ZxnsGzFH3fsqpRG7IVA5QeKkIQaNTN4fW2WtBBt8Lj
+         bcFac6PUOWHdgg17CfGlVoBKEnshAuUPiKjtdpdllh0Av8Gi5pKivyLNwij6C3lOlyJJ
+         FnI2v0ug8FjsR8V+yUZDb/jemDKkFWKwMQsqKbhAiI9oGj9l/GZnMe4mqUkW5Dg8KQLg
+         E/6w==;
+        dara=google.com
+ARC-Authentication-Results: i=1; mx.google.com;
+       dkim=pass header.i=@gmail.mcsv.net header.s=k2 header.b=BUZKjY6z;
+       dkim=pass header.i=@mailchimpapp.com header.s=k3 header.b=YX6l6M4V;
+       spf=pass (google.com: domain of bounce-mc.us5_161974962.10138739-79c5af5b1f@mail30.wdc01.mcdlv.net designates 205.201.129.30 as permitted sender) smtp.mailfrom=bounce-mc.us5_161974962.10138739-79c5af5b1f@mail30.wdc01.mcdlv.net;
+       dmarc=pass (p=REJECT sp=REJECT dis=NONE) header.from=mailchimpapp.com
+Return-Path: <bounce-mc.us5_161974962.10138739-79c5af5b1f@mail30.wdc01.mcdlv.net>
+Received: from mail30.wdc01.mcdlv.net (mail30.wdc01.mcdlv.net. [205.201.129.30])
+        by mx.google.com with ESMTPS id 3f1490d57ef6-e73311722easi6131073276.302.2025.04.29.11.10.21
+        for <lukaisthekingofgods@gmail.com>
+        (version=TLS1_3 cipher=TLS_AES_256_GCM_SHA384 bits=256/256);
+        Tue, 29 Apr 2025 11:10:21 -0700 (PDT)
+Received-SPF: pass (google.com: domain of bounce-mc.us5_161974962.10138739-79c5af5b1f@mail30.wdc01.mcdlv.net designates 205.201.129.30 as permitted sender) client-ip=205.201.129.30;
+Authentication-Results: mx.google.com;
+       dkim=pass header.i=@gmail.mcsv.net header.s=k2 header.b=BUZKjY6z;
+       dkim=pass header.i=@mailchimpapp.com header.s=k3 header.b=YX6l6M4V;
+       spf=pass (google.com: domain of bounce-mc.us5_161974962.10138739-79c5af5b1f@mail30.wdc01.mcdlv.net designates 205.201.129.30 as permitted sender) smtp.mailfrom=bounce-mc.us5_161974962.10138739-79c5af5b1f@mail30.wdc01.mcdlv.net;
+       dmarc=pass (p=REJECT sp=REJECT dis=NONE) header.from=mailchimpapp.com
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=gmail.mcsv.net; s=k2; t=1745950220; x=1746036620; bh=AjwoWtkf+Sw30+HZ0c+N9ZZsMZd7T+yxKpo62xQ3gO0=; h=Subject:From:Reply-To:To:Date:Message-ID:X-MC-User:Feedback-ID:
+	 List-ID:List-Unsubscribe:List-Unsubscribe-Post:Content-Type:
+	 MIME-Version:CC:Date:Subject:From; b=BUZKjY6zMkZHJXcKO8NHScV4w2LNJ7NiwcREmN6TZUSPAxyr/+Ktvlh1aaezX9chX
+	 PUYWCtHwdYRd/vfyIOX1mmDuIJRRmV40FFAkZgozuCo8tG5ywf9XnnoN6QxdgfK7cB
+	 BsJr3D862T3e7kVcOe3bpMrUAPcm0ZrRYNs5Dh2sCckNcxoBfh21yqKqPsoS3Rymo4
+	 pnQK3/Rl6sI1tGSIB9pvbe4T6a07Ps1dF2ifn5vWYFNXdSlb736qyLVXbQbjOeWeRR
+	 ztNCXGE2G35WxgccMhRGbz84N/JJoXHt9nnLkaKlO7B8uG/BwtNu9TjKfYeO6v71Xz
+	 o3e4HhI42qM6g==
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=mailchimpapp.com; s=k3; t=1745950220; x=1746220220; i=evanchen.records@161974962.mailchimpapp.com; bh=AjwoWtkf+Sw30+HZ0c+N9ZZsMZd7T+yxKpo62xQ3gO0=; h=Subject:From:Reply-To:To:Date:Message-ID:X-MC-User:Feedback-ID:
+	 List-ID:List-Unsubscribe:List-Unsubscribe-Post:Content-Type:
+	 MIME-Version:CC:Date:Subject:From; b=YX6l6M4Vw+3V4CXfDoLg6/8K52adQZPLYvRvS1jRcJC9m0A0g17crhavvztKxy3sL
+	 Eene03cbPRvGztybIgqEvUth2UfxnwZbQNXiVxXR2/s+i3cnKu99I/ZsHybstFj701
+	 6C8HK4AgHuYYKduPrCIjkcSoiXnlzVH1oJC9giWLAqBa2xT3Jahmx6UaqbkpXDRypj
+	 X3vU3fFLQSP9UsBMX4pvL/lD/lDnA/339lKOJ3TI90l5A52kcJo7xjREnS94aOIAt8
+	 4OZBGRIMalzILRMHqZbHbK6z+FcWGG4cybV+m4MNwUsje2HWzmo4W5ylnjOh9jmtne
+	 1JjvRo7Jv9qVg==
+Received: from localhost (localhost [127.0.0.1]) by mail30.wdc01.mcdlv.net (Mailchimp) with ESMTP id 4Zn7dm3C5KzFCqCWv for <lukaisthekingofgods@gmail.com>; Tue, 29 Apr 2025 18:10:20 +0000 (GMT)
+Subject: OTIS wrap-up
+From: Evan <evanchen.records@161974962.mailchimpapp.com>
+Reply-To: <evanchen.records@gmail.com>
+To: <lukaisthekingofgods@gmail.com>
+Date: Tue, 29 Apr 2025 18:10:13 +0000
+Message-ID: <5c818a0be2f35ee90344a471e.79c5af5b1f.20250429181007.3801eda1ed.a4f19f7f@mail30.wdc01.mcdlv.net>
+X-Mailer: Mailchimp Mailer - **CID3801eda1ed79c5af5b1f**
+X-Campaign: mailchimp5c818a0be2f35ee90344a471e.3801eda1ed
+X-campaignid: mailchimp5c818a0be2f35ee90344a471e.3801eda1ed
+X-Report-Abuse: Please report abuse for this campaign here: https://mailchimp.com/contact/abuse/?u=5c818a0be2f35ee90344a471e&id=3801eda1ed&e=79c5af5b1f
+X-MC-User: 5c818a0be2f35ee90344a471e
+Feedback-ID: 161974962:161974962.10138739:us5:mc
+List-ID: 5c818a0be2f35ee90344a471emc list <5c818a0be2f35ee90344a471e.466509.list-id.mcsv.net>
+X-Accounttype: pd
+List-Unsubscribe: <https://evanchen.us5.list-manage.com/unsubscribe?u=5c818a0be2f35ee90344a471e&id=808c50e8c9&t=h&e=79c5af5b1f&c=3801eda1ed>, <mailto:unsubscribe-mc.us5_5c818a0be2f35ee90344a471e.3801eda1ed-79c5af5b1f@unsubscribe.mailchimpapp.net?subject=unsubscribe>
+List-Unsubscribe-Post: List-Unsubscribe=One-Click
+Content-Type: multipart/alternative; boundary="_----------=_MCPart_1817622299"
+MIME-Version: 1.0
+
+--_----------=_MCPart_1817622299
+Content-Type: text/plain; charset="utf-8"; format="fixed"
+Content-Transfer-Encoding: quoted-printable
+
+View this email in your browser (https://mailchi.mp/4a235c85789a/otis-wrap-=
+up?e=3D79c5af5b1f)
+https://otis.evanchen.cc/
+
+
+** OTIS X Wrap-up
+------------------------------------------------------------
+
+We=E2=80=99re wrapping up a decade of OTIS now somehow. Feels a little surr=
+eal, but I don=E2=80=99t think I=E2=80=99m dreaming.
+
+
+** Closing date
+------------------------------------------------------------
+
+OTIS-WEB submissions will continue to be open until at least May 7, 2025 23=
+:59 UTC, so if you want to get in any last minute submissions, do so now. N=
+ote that check-offs may be slower in the first week of May because Evan wil=
+l be traveling. However, I guarantee to still (eventually) check off any pr=
+oblem sets submitted on or before that date.
+
+After that, OTIS X will officially be over and the website will move into s=
+ummer mode. You should read section 8 of the syllabus for details on what t=
+hat entails.
+
+If you want to request unit unlocks to work on over the summer, now should =
+be the time to do that as well. Same deadline.
+
+
+** T-shirt reminder
+------------------------------------------------------------
+
+As a reminder, if you want to purchase the amazing Turbo-the-snail OTIS T-s=
+hirt, you need to do so by May 12. After that I will be placing the order a=
+nd the shirts will move into production.
+Open T-shirt form (https://forms.gle/54C51MntTQxhJur98)
+
+
+** Survey 3
+------------------------------------------------------------
+
+The final OTIS survey is up now! This is where you can suggest all the chan=
+ges you want to see for OTIS XI. Or just say thank-you. That=E2=80=99s appr=
+eciated too.
+Open Survey 3 (https://forms.gle/eYXiSK2cqHBQfgWo7)
+https://instagram.com/evanchen.cc/
+https://blog.evanchen.cc/#23332e31346e746572657374
+mailto:evan@evanchen.cc
+https://youtube.com/c/vEnhance
+
+Copyright (C) 2025 OTIS. All rights reserved.
+You are receiving this email because you registered it on OTIS-WEB.
+Want to change how you receive these emails?
+You can update your preferences (https://evanchen.us5.list-manage.com/profi=
+le?u=3D5c818a0be2f35ee90344a471e&id=3D808c50e8c9&e=3D79c5af5b1f&c=3D3801eda=
+1ed) or unsubscribe (https://evanchen.us5.list-manage.com/unsubscribe?u=3D5=
+c818a0be2f35ee90344a471e&id=3D808c50e8c9&t=3Db&e=3D79c5af5b1f&c=3D3801eda1e=
+d)
+ Email Marketing Powered by Mailchimp
+https://login.mailchimp.com/signup/email-referral/?aid=3D5c818a0be2f35ee903=
+44a471e
+--_----------=_MCPart_1817622299
+Content-Type: text/html; charset="utf-8"
+Content-Transfer-Encoding: quoted-printable
+
+<!DOCTYPE html>
+<html xmlns=3D"http://www.w3.org/1999/xhtml" xmlns:v=3D"urn:schemas-microso=
+ft-com:vml" xmlns:o=3D"urn:schemas-microsoft-com:office:office"><head>
+<!--[if gte mso 15]>
+<xml>
+<o:OfficeDocumentSettings>
+<o:AllowPNG/>
+<o:PixelsPerInch>96</o:PixelsPerInch>
+</o:OfficeDocumentSettings>
+</xml>
+<![endif]-->
+<meta charset=3D"UTF-8" />
+<meta http-equiv=3D"X-UA-Compatible" content=3D"IE=3Dedge" />
+<meta name=3D"viewport" content=3D"width=3Ddevice-width, initial-scale=3D1"=
+ />
+<title>OTIS wrap-up</title>
+<link rel=3D"preconnect" href=3D"https://fonts.googleapis.com" />
+<link rel=3D"preconnect" href=3D"https://fonts.gstatic.com" crossorigin=3D"=
+" />
+<style>          img{-ms-interpolation-mode:bicubic;}
+          table, td{mso-table-lspace:0pt; mso-table-rspace:0pt;}
+          .mceStandardButton, .mceStandardButton td, .mceStandardButton td =
+a{mso-hide:all !important;}
+          p, a, li, td, blockquote{mso-line-height-rule:exactly;}
+          p, a, li, td, body, table, blockquote{-ms-text-size-adjust:100%; =
+-webkit-text-size-adjust:100%;}
+          @media only screen and (max-width: 480px){
+            body, table, td, p, a, li, blockquote{-webkit-text-size-adjust:=
+none !important;}
+          }
+          .mcnPreviewText{display: none !important;}
+          .bodyCell{margin:0 auto; padding:0; width:100%;}
+          .ExternalClass, .ExternalClass p, .ExternalClass td, .ExternalCla=
+ss div, .ExternalClass span, .ExternalClass font{line-height:100%;}
+          .ReadMsgBody{width:100%;} .ExternalClass{width:100%;}
+          a[x-apple-data-detectors]{color:inherit !important; text-decorati=
+on:none !important; font-size:inherit !important; font-family:inherit !impo=
+rtant; font-weight:inherit !important; line-height:inherit !important;}
+            body{height:100%; margin:0; padding:0; width:100%; background: =
+#ffffff;}
+            p{margin:0; padding:0;}
+            table{border-collapse:collapse;}
+            td, p, a{word-break:break-word;}
+            h1, h2, h3, h4, h5, h6{display:block; margin:0; padding:0;}
+            img, a img{border:0; height:auto; outline:none; text-decoration=
+:none;}
+            a[href^=3D"tel"], a[href^=3D"sms"]{color:inherit; cursor:defaul=
+t; text-decoration:none;}
+            li p {margin: 0 !important;}
+            .ProseMirror a {
+                pointer-events: none;
+            }
+            @media only screen and (max-width: 640px){
+                .mceClusterLayout td{padding: 4px !important;}
+            }
+            @media only screen and (max-width: 480px){
+                body{width:100% !important; min-width:100% !important; }
+                body.mobile-native {
+                    -webkit-user-select: none; user-select: none; transitio=
+n: transform 0.2s ease-in; transform-origin: top center;
+                }
+                body.mobile-native.selection-allowed a, body.mobile-native.=
+selection-allowed .ProseMirror {
+                    user-select: auto;
+                    -webkit-user-select: auto;
+                }
+                colgroup{display: none;}
+                img{height: auto !important;}
+                .mceWidthContainer{max-width: 660px !important;}
+                .mceColumn{display: block !important; width: 100% !importan=
+t;}
+                .mceColumn-forceSpan{display: table-cell !important; width:=
+ auto !important;}
+                .mceColumn-forceSpan .mceButton a{min-width:0 !important;}
+                .mceBlockContainer{padding-right:16px !important; padding-l=
+eft:16px !important;}
+                .mceTextBlockContainer{padding-right:16px !important; paddi=
+ng-left:16px !important;}
+                .mceBlockContainerE2E{padding-right:0px; padding-left:0px;}
+                .mceSpacing-24{padding-right:16px !important; padding-left:=
+16px !important;}
+                .mceImage, .mceLogo{width: 100% !important; height: auto !i=
+mportant;}
+                .mceFooterSection .mceText, .mceFooterSection .mceText p{fo=
+nt-size: 16px !important; line-height: 140% !important;}
+            }
+            div[contenteditable=3D"true"] {outline: 0;}
+            .ProseMirror h1.empty-node:only-child::before,
+            .ProseMirror h2.empty-node:only-child::before,
+            .ProseMirror h3.empty-node:only-child::before,
+            .ProseMirror h4.empty-node:only-child::before {
+                content: 'Heading';
+            }
+            .ProseMirror p.empty-node:only-child::before, .ProseMirror:empt=
+y::before {
+                content: 'Start typing...';
+            }
+            .mceImageBorder {display: inline-block;}
+            .mceImageBorder img {border: 0 !important;}
+body, #bodyTable { background-color: rgb(255, 255, 255); }.mceText, .mcnTex=
+tContent, .mceLabel { font-family: "Helvetica Neue", Helvetica, Arial, Verd=
+ana, sans-serif; }.mceText, .mcnTextContent, .mceLabel { color: rgb(0, 0, 0=
+); }.mceSpacing-24 label { margin-bottom: 24px; }.mceSpacing-24 input { mar=
+gin-bottom: 24px; }.mceSpacing-24 .mceInput + .mceErrorMessage { margin-top=
+: -12px; }.mceSpacing-12 label { margin-bottom: 12px; }.mceSpacing-12 input=
+ { margin-bottom: 12px; }.mceSpacing-12 .mceInput + .mceErrorMessage { marg=
+in-top: -6px; }.mceInput { background-color: transparent; border: 2px solid=
+ rgb(208, 208, 208); width: 60%; color: rgb(77, 77, 77); display: block; }.=
+mceInput[type=3D"radio"], .mceInput[type=3D"checkbox"] { width: auto !impor=
+tant; float: left; margin-right: 12px; display: inline; }.mceLabel > .mceIn=
+put { margin-bottom: 0px; margin-top: 2px; }.mceLabel { display: block; }.m=
+ceText p, .mcnTextContent p { color: rgb(0, 0, 0); font-family: "Helvetica =
+Neue", Helvetica, Arial, Verdana, sans-serif; font-size: 16px; font-weight:=
+ normal; line-height: 1.5; mso-line-height-alt: 150%; text-align: left; let=
+ter-spacing: 0px; direction: ltr; margin: 0px; }.mceText h1, .mcnTextConten=
+t h1 { color: rgb(0, 0, 0); font-family: "Helvetica Neue", Helvetica, Arial=
+, Verdana, sans-serif; font-size: 31px; font-weight: bold; line-height: 1.5=
+; mso-line-height-alt: 150%; text-align: left; letter-spacing: 0px; directi=
+on: ltr; }.mceText a, .mcnTextContent a { color: rgb(0, 0, 0); font-style: =
+normal; font-weight: normal; text-decoration: underline; direction: ltr; }.=
+mceSectionHeader .mceText p, .mceSectionHeader .mcnTextContent p { }.mceSec=
+tionHeader .mceText a, .mceSectionHeader .mcnTextContent a { font-style: no=
+rmal; }.mceSectionBody .mceText h1, .mceSectionBody .mcnTextContent h1 { }.=
+mceSectionBody .mceText p, .mceSectionBody .mcnTextContent p { }.mceSection=
+Footer .mceText p, .mceSectionFooter .mcnTextContent p { }.mceSectionFooter=
+ .mceText a, .mceSectionFooter .mcnTextContent a { font-style: normal; }
+@media only screen and (max-width: 480px) {
+            .mceText p { font-size: 16px !important; margin: 0px; line-heig=
+ht: 1.5 !important; mso-line-height-alt: 150%; }
+          }
+@media only screen and (max-width: 480px) {
+            .mceText h1 { font-size: 31px !important; line-height: 1.5 !imp=
+ortant; mso-line-height-alt: 150%; }
+          }
+@media only screen and (max-width: 480px) {
+            .bodyCell { padding-left: 16px !important; padding-right: 16px =
+!important; }
+          }
+@media only screen and (max-width: 480px) {
+            .mceButtonContainer { width: fit-content !important; max-width:=
+ fit-content !important; }
+          }
+@media only screen and (max-width: 480px) {
+            .mceButtonLink { padding: 18px 28px !important; font-size: 16px=
+ !important; }
+          }
+@media only screen and (max-width: 480px) {
+            .mceDividerBlock { border-top-width: 2px !important; }
+          }
+@media only screen and (max-width: 480px) {
+            .mceDividerContainer { width: 100% !important; }
+          }
+#dataBlockId-12 p, #dataBlockId-12 h1, #dataBlockId-12 h2, #dataBlockId-12 =
+h3, #dataBlockId-12 h4, #dataBlockId-12 ul { text-align: center; }#dataBloc=
+kId-1 p, #dataBlockId-1 h1, #dataBlockId-1 h2, #dataBlockId-1 h3, #dataBloc=
+kId-1 h4, #dataBlockId-1 ul { text-align: center; }#dataBlockId-5 p, #dataB=
+lockId-5 h1, #dataBlockId-5 h2, #dataBlockId-5 h3, #dataBlockId-5 h4, #data=
+BlockId-5 ul { text-align: left; }</style></head>
+<body>
+<!--
+-->
+<!--[if !gte mso 9]><!----><span class=3D"mcnPreviewText" style=3D"display:=
+none; font-size:0px; line-height:0px; max-height:0px; max-width:0px; opacit=
+y:0; overflow:hidden; visibility:hidden; mso-hide:all;">T-shirts, survey, c=
+losing date</span><!--<![endif]-->
+<!--
+-->
+<div style=3D"display: none; max-height: 0px; overflow: hidden;">=CD=8F =E2=
+=80=8C =C2=A0 =E2=80=87  =CD=8F =E2=80=8C =C2=A0 =E2=80=87  =CD=8F =E2=80=
+=8C =C2=A0 =E2=80=87  =CD=8F =E2=80=8C =C2=A0 =E2=80=87  =CD=8F =E2=80=8C =
+=C2=A0 =E2=80=87  =CD=8F =E2=80=8C =C2=A0 =E2=80=87  =CD=8F =E2=80=8C =C2=
+=A0 =E2=80=87  =CD=8F =E2=80=8C =C2=A0 =E2=80=87  =CD=8F =E2=80=8C =C2=A0 =
+=E2=80=87  =CD=8F =E2=80=8C =C2=A0 =E2=80=87  =CD=8F =E2=80=8C =C2=A0 =E2=
+=80=87  =CD=8F =E2=80=8C =C2=A0 =E2=80=87  =CD=8F =E2=80=8C =C2=A0 =E2=80=
+=87  =CD=8F =E2=80=8C =C2=A0 =E2=80=87  =CD=8F =E2=80=8C =C2=A0 =E2=80=87  =
+=CD=8F =E2=80=8C =C2=A0 =E2=80=87  =CD=8F =E2=80=8C =C2=A0 =E2=80=87  =CD=
+=8F =E2=80=8C =C2=A0 =E2=80=87  =CD=8F =E2=80=8C =C2=A0 =E2=80=87  =CD=8F =
+=E2=80=8C =C2=A0 =E2=80=87  =CD=8F =E2=80=8C =C2=A0 =E2=80=87  =CD=8F =E2=
+=80=8C =C2=A0 =E2=80=87  =CD=8F =E2=80=8C =C2=A0 =E2=80=87  =CD=8F =E2=80=
+=8C =C2=A0 =E2=80=87  =CD=8F =E2=80=8C =C2=A0 =E2=80=87  =CD=8F =E2=80=8C =
+=C2=A0 =E2=80=87  =CD=8F =E2=80=8C =C2=A0 =E2=80=87  =CD=8F =E2=80=8C =C2=
+=A0 =E2=80=87  =CD=8F =E2=80=8C =C2=A0 =E2=80=87  =CD=8F =E2=80=8C =C2=A0 =
+=E2=80=87  =CD=8F =E2=80=8C =C2=A0 =E2=80=87  =CD=8F =E2=80=8C =C2=A0 =E2=
+=80=87  =CD=8F =E2=80=8C =C2=A0 =E2=80=87  =CD=8F =E2=80=8C =C2=A0 =E2=80=
+=87  =CD=8F =E2=80=8C =C2=A0 =E2=80=87  =CD=8F =E2=80=8C =C2=A0 =E2=80=87  =
+=CD=8F =E2=80=8C =C2=A0 =E2=80=87  =CD=8F =E2=80=8C =C2=A0 =E2=80=87  =CD=
+=8F =E2=80=8C =C2=A0 =E2=80=87  =CD=8F =E2=80=8C =C2=A0 =E2=80=87  =CD=8F =
+=E2=80=8C =C2=A0 =E2=80=87  =CD=8F =E2=80=8C =C2=A0 =E2=80=87  =CD=8F =E2=
+=80=8C =C2=A0 =E2=80=87  =CD=8F =E2=80=8C =C2=A0 =E2=80=87  =CD=8F =E2=80=
+=8C =C2=A0 =E2=80=87  =CD=8F =E2=80=8C =C2=A0 =E2=80=87  =CD=8F =E2=80=8C =
+=C2=A0 =E2=80=87  =CD=8F =E2=80=8C =C2=A0 =E2=80=87  =CD=8F =E2=80=8C =C2=
+=A0 =E2=80=87  =CD=8F =E2=80=8C =C2=A0 =E2=80=87  =CD=8F =E2=80=8C =C2=A0 =
+=E2=80=87  =CD=8F =E2=80=8C =C2=A0 =E2=80=87  =CD=8F =E2=80=8C =C2=A0 =E2=
+=80=87  =CD=8F =E2=80=8C =C2=A0 =E2=80=87  =CD=8F =E2=80=8C =C2=A0 =E2=80=
+=87  =CD=8F =E2=80=8C =C2=A0 =E2=80=87  =CD=8F =E2=80=8C =C2=A0 =E2=80=87  =
+=CD=8F =E2=80=8C =C2=A0 =E2=80=87  =CD=8F =E2=80=8C =C2=A0 =E2=80=87  =CD=
+=8F =E2=80=8C =C2=A0 =E2=80=87  =CD=8F =E2=80=8C =C2=A0 =E2=80=87  =CD=8F =
+=E2=80=8C =C2=A0 =E2=80=87  =CD=8F =E2=80=8C =C2=A0 =E2=80=87  =CD=8F =E2=
+=80=8C =C2=A0 =E2=80=87  =CD=8F =E2=80=8C =C2=A0 =E2=80=87  =CD=8F =E2=80=
+=8C =C2=A0 =E2=80=87  =CD=8F =E2=80=8C =C2=A0 =E2=80=87  =CD=8F =E2=80=8C =
+=C2=A0 =E2=80=87  =CD=8F =E2=80=8C =C2=A0 =E2=80=87  =CD=8F =E2=80=8C =C2=
+=A0 =E2=80=87  =CD=8F =E2=80=8C =C2=A0 =E2=80=87  =CD=8F =E2=80=8C =C2=A0 =
+=E2=80=87  =CD=8F =E2=80=8C =C2=A0 =E2=80=87  =CD=8F =E2=80=8C =C2=A0 =E2=
+=80=87  =CD=8F =E2=80=8C =C2=A0 =E2=80=87  =CD=8F =E2=80=8C =C2=A0 =E2=80=
+=87  =CD=8F =E2=80=8C =C2=A0 =E2=80=87  =CD=8F =E2=80=8C =C2=A0 =E2=80=87  =
+=CD=8F =E2=80=8C =C2=A0 =E2=80=87  =CD=8F =E2=80=8C =C2=A0 =E2=80=87  =CD=
+=8F =E2=80=8C =C2=A0 =E2=80=87  =CD=8F =E2=80=8C =C2=A0 =E2=80=87  =CD=8F =
+=E2=80=8C =C2=A0 =E2=80=87  =CD=8F =E2=80=8C =C2=A0 =E2=80=87  =CD=8F =E2=
+=80=8C =C2=A0 =E2=80=87  =CD=8F =E2=80=8C =C2=A0 =E2=80=87  =CD=8F =E2=80=
+=8C =C2=A0 =E2=80=87  =CD=8F =E2=80=8C =C2=A0 =E2=80=87  =CD=8F =E2=80=8C =
+=C2=A0 =E2=80=87  =CD=8F =E2=80=8C =C2=A0 =E2=80=87  =CD=8F =E2=80=8C =C2=
+=A0 =E2=80=87  =CD=8F =E2=80=8C =C2=A0 =E2=80=87  =CD=8F =E2=80=8C =C2=A0 =
+=E2=80=87  =CD=8F =E2=80=8C =C2=A0 =E2=80=87  =CD=8F =E2=80=8C =C2=A0 =E2=
+=80=87  =CD=8F =E2=80=8C =C2=A0 =E2=80=87  =CD=8F =E2=80=8C =C2=A0 =E2=80=
+=87  =CD=8F =E2=80=8C =C2=A0 =E2=80=87  =CD=8F =E2=80=8C =C2=A0 =E2=80=87  =
+=CD=8F =E2=80=8C =C2=A0 =E2=80=87  =CD=8F =E2=80=8C =C2=A0 =E2=80=87  =CD=
+=8F =E2=80=8C =C2=A0 =E2=80=87  =CD=8F =E2=80=8C =C2=A0 =E2=80=87  =CD=8F =
+=E2=80=8C =C2=A0 =E2=80=87  =CD=8F =E2=80=8C =C2=A0 =E2=80=87  =CD=8F =E2=
+=80=8C =C2=A0 =E2=80=87  =CD=8F =E2=80=8C =C2=A0 =E2=80=87  =CD=8F =E2=80=
+=8C =C2=A0 =E2=80=87  =CD=8F =E2=80=8C =C2=A0 =E2=80=87  =CD=8F =E2=80=8C =
+=C2=A0 =E2=80=87  =CD=8F =E2=80=8C =C2=A0 =E2=80=87  =CD=8F =E2=80=8C =C2=
+=A0 =E2=80=87  =CD=8F =E2=80=8C =C2=A0 =E2=80=87  =CD=8F =E2=80=8C =C2=A0 =
+=E2=80=87  =CD=8F =E2=80=8C =C2=A0 =E2=80=87  =CD=8F =E2=80=8C =C2=A0 =E2=
+=80=87  =CD=8F =E2=80=8C =C2=A0 =E2=80=87  =CD=8F =E2=80=8C =C2=A0 =E2=80=
+=87  =CD=8F =E2=80=8C =C2=A0 =E2=80=87  =CD=8F =E2=80=8C =C2=A0 =E2=80=87  =
+=CD=8F =E2=80=8C =C2=A0 =E2=80=87  =CD=8F =E2=80=8C =C2=A0 =E2=80=87  =CD=
+=8F =E2=80=8C =C2=A0 =E2=80=87  =CD=8F =E2=80=8C =C2=A0 =E2=80=87  =CD=8F =
+=E2=80=8C =C2=A0 =E2=80=87  =CD=8F =E2=80=8C =C2=A0 =E2=80=87  =CD=8F =E2=
+=80=8C =C2=A0 =E2=80=87  =CD=8F =E2=80=8C =C2=A0 =E2=80=87  =CD=8F =E2=80=
+=8C =C2=A0 =E2=80=87  =CD=8F =E2=80=8C =C2=A0 =E2=80=87  =CD=8F =E2=80=8C =
+=C2=A0 =E2=80=87  =CD=8F =E2=80=8C =C2=A0 =E2=80=87  =CD=8F =E2=80=8C =C2=
+=A0 =E2=80=87  =CD=8F =E2=80=8C =C2=A0 =E2=80=87  =CD=8F =E2=80=8C =C2=A0 =
+=E2=80=87  =CD=8F =E2=80=8C =C2=A0 =E2=80=87  =CD=8F =E2=80=8C =C2=A0 =E2=
+=80=87  =CD=8F =E2=80=8C =C2=A0 =E2=80=87  =CD=8F =E2=80=8C =C2=A0 =E2=80=
+=87  =CD=8F =E2=80=8C =C2=A0 =E2=80=87  =CD=8F =E2=80=8C =C2=A0 =E2=80=87  =
+=CD=8F =E2=80=8C =C2=A0 =E2=80=87  =CD=8F =E2=80=8C =C2=A0 =E2=80=87  =CD=
+=8F =E2=80=8C =C2=A0 =E2=80=87  =CD=8F =E2=80=8C =C2=A0 =E2=80=87  =CD=8F =
+=E2=80=8C =C2=A0 =E2=80=87  =CD=8F =E2=80=8C =C2=A0 =E2=80=87  =CD=8F =E2=
+=80=8C =C2=A0 =E2=80=87  =CD=8F =E2=80=8C =C2=A0 =E2=80=87  =CD=8F =E2=80=
+=8C =C2=A0 =E2=80=87  =CD=8F =E2=80=8C =C2=A0 =E2=80=87  =CD=8F =E2=80=8C =
+=C2=A0 =E2=80=87  =CD=8F =E2=80=8C =C2=A0 =E2=80=87  =CD=8F =E2=80=8C =C2=
+=A0 =E2=80=87  =CD=8F =E2=80=8C =C2=A0 =E2=80=87  =CD=8F =E2=80=8C =C2=A0 =
+=E2=80=87  =CD=8F =E2=80=8C =C2=A0 =E2=80=87  =CD=8F =E2=80=8C =C2=A0 =E2=
+=80=87  =CD=8F =E2=80=8C =C2=A0 =E2=80=87  =CD=8F =E2=80=8C =C2=A0 =E2=80=
+=87  =CD=8F =E2=80=8C =C2=A0 =E2=80=87  =CD=8F =E2=80=8C =C2=A0 =E2=80=87  =
+=CD=8F =E2=80=8C =C2=A0 =E2=80=87  =CD=8F =E2=80=8C =C2=A0 =E2=80=87  =CD=
+=8F =E2=80=8C =C2=A0 =E2=80=87  =CD=8F =E2=80=8C =C2=A0 =E2=80=87  =CD=8F =
+=E2=80=8C =C2=A0 =E2=80=87  =CD=8F =E2=80=8C =C2=A0 =E2=80=87  =CD=8F =E2=
+=80=8C =C2=A0 =E2=80=87  =CD=8F =E2=80=8C =C2=A0 =E2=80=87  =CD=8F =E2=80=
+=8C =C2=A0 =E2=80=87  =CD=8F =E2=80=8C =C2=A0 =E2=80=87  =CD=8F =E2=80=8C =
+=C2=A0 =E2=80=87  =CD=8F =E2=80=8C =C2=A0 =E2=80=87  =CD=8F =E2=80=8C =C2=
+=A0 =E2=80=87  =CD=8F =E2=80=8C =C2=A0 =E2=80=87  =CD=8F =E2=80=8C =C2=A0 =
+=E2=80=87  =CD=8F =E2=80=8C =C2=A0 =E2=80=87  =CD=8F =E2=80=8C =C2=A0 =E2=
+=80=87  =CD=8F =E2=80=8C =C2=A0 =E2=80=87  =CD=8F =E2=80=8C =C2=A0 =E2=80=
+=87  =CD=8F =E2=80=8C =C2=A0 =E2=80=87  =CD=8F =E2=80=8C =C2=A0 =E2=80=87  =
+=CD=8F =E2=80=8C =C2=A0 =E2=80=87  =CD=8F =E2=80=8C =C2=A0 =E2=80=87  =CD=
+=8F =E2=80=8C =C2=A0 =E2=80=87  =CD=8F =E2=80=8C =C2=A0 =E2=80=87  =CD=8F =
+=E2=80=8C =C2=A0 =E2=80=87  =CD=8F =E2=80=8C =C2=A0 =E2=80=87  =CD=8F =E2=
+=80=8C =C2=A0 =E2=80=87  =CD=8F =E2=80=8C =C2=A0 =E2=80=87  =CD=8F =E2=80=
+=8C =C2=A0 =E2=80=87  =CD=8F =E2=80=8C =C2=A0 =E2=80=87  =CD=8F =E2=80=8C =
+=C2=A0 =E2=80=87  =CD=8F =E2=80=8C =C2=A0 =E2=80=87  =CD=8F =E2=80=8C =C2=
+=A0 =E2=80=87  =CD=8F =E2=80=8C =C2=A0 =E2=80=87  =CD=8F =E2=80=8C =C2=A0 =
+=E2=80=87  =CD=8F =E2=80=8C =C2=A0 =E2=80=87  =CD=8F =E2=80=8C =C2=A0 =E2=
+=80=87  =CD=8F =E2=80=8C =C2=A0 =E2=80=87  =CD=8F =E2=80=8C =C2=A0 =E2=80=
+=87  =CD=8F =E2=80=8C =C2=A0 =E2=80=87  =CD=8F =E2=80=8C =C2=A0 =E2=80=87  =
+=CD=8F =E2=80=8C =C2=A0 =E2=80=87  =CD=8F =E2=80=8C =C2=A0 =E2=80=87  =CD=
+=8F =E2=80=8C =C2=A0 =E2=80=87  =CD=8F =E2=80=8C =C2=A0 =E2=80=87  =CD=8F =
+=E2=80=8C =C2=A0 =E2=80=87  =CD=8F =E2=80=8C =C2=A0 =E2=80=87  =CD=8F =E2=
+=80=8C =C2=A0 =E2=80=87  =CD=8F =E2=80=8C =C2=A0 =E2=80=87  =CD=8F =E2=80=
+=8C =C2=A0 =E2=80=87  =CD=8F =E2=80=8C =C2=A0 =E2=80=87  =CD=8F =E2=80=8C =
+=C2=A0 =E2=80=87  =CD=8F =E2=80=8C =C2=A0 =E2=80=87  =CD=8F =E2=80=8C =C2=
+=A0 =E2=80=87  =CD=8F =E2=80=8C =C2=A0 =E2=80=87  =CD=8F =E2=80=8C =C2=A0 =
+=E2=80=87  =CD=8F =E2=80=8C =C2=A0 =E2=80=87  =CD=8F =E2=80=8C =C2=A0 =E2=
+=80=87  =CD=8F =E2=80=8C =C2=A0 =E2=80=87  =CD=8F =E2=80=8C =C2=A0 =E2=80=
+=87  =CD=8F =E2=80=8C =C2=A0 =E2=80=87  =CD=8F =E2=80=8C =C2=A0 =E2=80=87  =
+=CD=8F =E2=80=8C =C2=A0 =E2=80=87  =CD=8F =E2=80=8C =C2=A0 =E2=80=87  =CD=
+=8F =E2=80=8C =C2=A0 =E2=80=87  =CD=8F =E2=80=8C =C2=A0 =E2=80=87  =CD=8F =
+=E2=80=8C =C2=A0 =E2=80=87  =CD=8F =E2=80=8C =C2=A0 =E2=80=87  =CD=8F =E2=
+=80=8C =C2=A0 =E2=80=87  =CD=8F =E2=80=8C =C2=A0 =E2=80=87  =CD=8F =E2=80=
+=8C =C2=A0 =E2=80=87  =CD=8F =E2=80=8C =C2=A0 =E2=80=87  =CD=8F =E2=80=8C =
+=C2=A0 =E2=80=87  =CD=8F =E2=80=8C =C2=A0 =E2=80=87  =CD=8F =E2=80=8C =C2=
+=A0 =E2=80=87  =CD=8F =E2=80=8C =C2=A0 =E2=80=87  =CD=8F =E2=80=8C =C2=A0 =
+=E2=80=87  =CD=8F =E2=80=8C =C2=A0 =E2=80=87  =CD=8F =E2=80=8C =C2=A0 =E2=
+=80=87  =CD=8F =E2=80=8C =C2=A0 =E2=80=87  =CD=8F =E2=80=8C =C2=A0 =E2=80=
+=87  =CD=8F =E2=80=8C =C2=A0 =E2=80=87  =CD=8F =E2=80=8C =C2=A0 =E2=80=87  =
+=CD=8F =E2=80=8C =C2=A0 =E2=80=87  =CD=8F =E2=80=8C =C2=A0 =E2=80=87  =CD=
+=8F =E2=80=8C =C2=A0 =E2=80=87  =CD=8F =E2=80=8C =C2=A0 =E2=80=87  =CD=8F =
+=E2=80=8C =C2=A0 =E2=80=87  =CD=8F =E2=80=8C =C2=A0 =E2=80=87  =CD=8F =E2=
+=80=8C =C2=A0 =E2=80=87  =CD=8F =E2=80=8C =C2=A0 =E2=80=87  =CD=8F =E2=80=
+=8C =C2=A0 =E2=80=87  =CD=8F =E2=80=8C =C2=A0 =E2=80=87  =CD=8F =E2=80=8C =
+=C2=A0 =E2=80=87  =CD=8F =E2=80=8C =C2=A0 =E2=80=87  =CD=8F =E2=80=8C =C2=
+=A0 =E2=80=87  =CD=8F =E2=80=8C =C2=A0 =E2=80=87  =CD=8F =E2=80=8C =C2=A0 =
+=E2=80=87  =CD=8F =E2=80=8C =C2=A0 =E2=80=87  =CD=8F =E2=80=8C =C2=A0 =E2=
+=80=87  =CD=8F =E2=80=8C =C2=A0 =E2=80=87  =CD=8F =E2=80=8C =C2=A0 =E2=80=
+=87  =CD=8F =E2=80=8C =C2=A0 =E2=80=87  =CD=8F =E2=80=8C =C2=A0 =E2=80=87  =
+=CD=8F =E2=80=8C =C2=A0 =E2=80=87  =CD=8F =E2=80=8C =C2=A0 =E2=80=87  =CD=
+=8F =E2=80=8C =C2=A0 =E2=80=87  =CD=8F =E2=80=8C =C2=A0 =E2=80=87  =CD=8F =
+=E2=80=8C =C2=A0 =E2=80=87  =CD=8F =E2=80=8C =C2=A0 =E2=80=87  =CD=8F =E2=
+=80=8C =C2=A0 =E2=80=87  =CD=8F =E2=80=8C =C2=A0 =E2=80=87  =CD=8F =E2=80=
+=8C =C2=A0 =E2=80=87  =CD=8F =E2=80=8C =C2=A0 =E2=80=87  =CD=8F =E2=80=8C =
+=C2=A0 =E2=80=87  =CD=8F =E2=80=8C =C2=A0 =E2=80=87  =CD=8F =E2=80=8C =C2=
+=A0 =E2=80=87  =CD=8F =E2=80=8C =C2=A0 =E2=80=87  =CD=8F =E2=80=8C =C2=A0 =
+=E2=80=87  =CD=8F =E2=80=8C =C2=A0 =E2=80=87  =CD=8F =E2=80=8C =C2=A0 =E2=
+=80=87  =CD=8F =E2=80=8C =C2=A0 =E2=80=87  =CD=8F =E2=80=8C =C2=A0 =E2=80=
+=87  =CD=8F =E2=80=8C =C2=A0 =E2=80=87  =CD=8F =E2=80=8C =C2=A0 =E2=80=87  =
+=CD=8F =E2=80=8C =C2=A0 =E2=80=87  =CD=8F =E2=80=8C =C2=A0 =E2=80=87  =CD=
+=8F =E2=80=8C =C2=A0 =E2=80=87  =CD=8F =E2=80=8C =C2=A0 =E2=80=87  =CD=8F =
+=E2=80=8C =C2=A0 =E2=80=87  =CD=8F =E2=80=8C =C2=A0 =E2=80=87  =CD=8F =E2=
+=80=8C =C2=A0 =E2=80=87  =CD=8F =E2=80=8C =C2=A0 =E2=80=87  =CD=8F =E2=80=
+=8C =C2=A0 =E2=80=87  =CD=8F =E2=80=8C =C2=A0 =E2=80=87  =CD=8F =E2=80=8C =
+=C2=A0 =E2=80=87  =CD=8F =E2=80=8C =C2=A0 =E2=80=87  =CD=8F =E2=80=8C =C2=
+=A0 =E2=80=87  =CD=8F =E2=80=8C =C2=A0 =E2=80=87  =CD=8F =E2=80=8C =C2=A0 =
+=E2=80=87  =CD=8F =E2=80=8C =C2=A0 =E2=80=87  =CD=8F =E2=80=8C =C2=A0 =E2=
+=80=87  =CD=8F =E2=80=8C =C2=A0 =E2=80=87  =CD=8F =E2=80=8C =C2=A0 =E2=80=
+=87  =CD=8F =E2=80=8C =C2=A0 =E2=80=87  =CD=8F =E2=80=8C =C2=A0 =E2=80=87  =
+=CD=8F =E2=80=8C =C2=A0 =E2=80=87  =CD=8F =E2=80=8C =C2=A0 =E2=80=87  =CD=
+=8F =E2=80=8C =C2=A0 =E2=80=87  =CD=8F =E2=80=8C =C2=A0 =E2=80=87  =CD=8F =
+=E2=80=8C =C2=A0 =E2=80=87  =CD=8F =E2=80=8C =C2=A0 =E2=80=87  =CD=8F =E2=
+=80=8C =C2=A0 =E2=80=87  =CD=8F =E2=80=8C =C2=A0 =E2=80=87  =CD=8F =E2=80=
+=8C =C2=A0 =E2=80=87  =CD=8F =E2=80=8C =C2=A0 =E2=80=87  =CD=8F =E2=80=8C =
+=C2=A0 =E2=80=87=C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=
+=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =
+=C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=
+=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =
+=C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=
+=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =
+=C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=
+=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =
+=C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=
+=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =
+=C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=
+=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =
+=C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=
+=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =
+=C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=
+=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =
+=C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=
+=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =
+=C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=
+=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =
+=C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=
+=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =
+=C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=
+=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =
+=C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=
+=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =
+=C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=
+=AD</div><div style=3D"display:none;">=E2=80=87&#xFEFF;=CD=8F =E2=80=87&#xF=
+EFF;=CD=8F =E2=80=87&#xFEFF;=CD=8F =E2=80=87&#xFEFF;=CD=8F=E2=80=87&#xFEFF;=
+=CD=8F =E2=80=87&#xFEFF;=CD=8F =E2=80=87&#xFEFF;=CD=8F =E2=80=87&#xFEFF;=CD=
+=8F=E2=80=87&#xFEFF;=CD=8F =E2=80=87&#xFEFF;=CD=8F =E2=80=87&#xFEFF;=CD=8F =
+=E2=80=87&#xFEFF;=CD=8F=E2=80=87&#xFEFF;=CD=8F =E2=80=87&#xFEFF;=CD=8F =E2=
+=80=87&#xFEFF;=CD=8F =E2=80=87&#xFEFF;=CD=8F=E2=80=87&#xFEFF;=CD=8F =E2=80=
+=87&#xFEFF;=CD=8F =E2=80=87&#xFEFF;=CD=8F =E2=80=87&#xFEFF;=CD=8F=E2=80=87&=
+#xFEFF;=CD=8F =E2=80=87&#xFEFF;=CD=8F =E2=80=87&#xFEFF;=CD=8F =E2=80=87&#xF=
+EFF;=CD=8F</div><!--[if !mso]><!--><div style=3D"display:none; font-size:0p=
+x; line-height:0px; max-height:0px; max-width:0px; opacity:0; overflow:hidd=
+en; visibility:hidden; mso-hide:all;"><img src=3D"https://evanchen.us5.list=
+-manage.com/track/open.php?u=3D5c818a0be2f35ee90344a471e&id=3D3801eda1ed&e=
+=3D79c5af5b1f" height=3D"1" width=3D"1" style=3D"display:none; font-size:0p=
+x; line-height:0px; opacity:0; overflow:hidden; visibility:hidden; mso-hide=
+:all;" alt=3D""></div><!--<![endif]-->
+<center>
+<table border=3D"0" cellpadding=3D"0" cellspacing=3D"0" height=3D"100%" wid=
+th=3D"100%" id=3D"bodyTable" style=3D"background-color: rgb(255, 255, 255);=
+">
+<tbody><tr>
+<td class=3D"bodyCell" align=3D"center" valign=3D"top">
+<table id=3D"root" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" width=
+=3D"100%"><tbody data-block-id=3D"4" class=3D"mceWrapper"><tr><td style=3D"=
+background-color:transparent" valign=3D"top" align=3D"center" class=3D"mceS=
+ectionHeader"><!--[if (gte mso 9)|(IE)]><table align=3D"center" border=3D"0=
+" cellspacing=3D"0" cellpadding=3D"0" width=3D"660" style=3D"width:660px;">=
+<tr><td><![endif]--><table border=3D"0" cellpadding=3D"0" cellspacing=3D"0"=
+ width=3D"100%" style=3D"max-width:660px" role=3D"presentation"><tbody><tr>=
+<td style=3D"background-color:#ffffff" valign=3D"top" class=3D"mceWrapperIn=
+ner"><table align=3D"center" border=3D"0" cellpadding=3D"0" cellspacing=3D"=
+0" width=3D"100%" role=3D"presentation" data-block-id=3D"3"><tbody><tr clas=
+s=3D"mceRow"><td style=3D"background-position:center;background-repeat:no-r=
+epeat;background-size:cover" valign=3D"top"><table border=3D"0" cellpadding=
+=3D"0" cellspacing=3D"0" width=3D"100%" role=3D"presentation"><tbody><tr><t=
+d style=3D"padding-top:0;padding-bottom:0" valign=3D"top" class=3D"mceColum=
+n" data-block-id=3D"-7" colspan=3D"12" width=3D"100%"><table border=3D"0" c=
+ellpadding=3D"0" cellspacing=3D"0" width=3D"100%" role=3D"presentation"><tb=
+ody><tr><td style=3D"padding-top:0;padding-bottom:0;padding-right:0;padding=
+-left:0" valign=3D"top" id=3D"blockContainerId-1"><table width=3D"100%" sty=
+le=3D"border:0;border-radius:0;border-collapse:separate"><tbody><tr><td sty=
+le=3D"padding-left:24px;padding-right:24px;padding-top:12px;padding-bottom:=
+12px" class=3D"mceTextBlockContainer"><div data-block-id=3D"1" class=3D"mce=
+Text" id=3D"dataBlockId-1" style=3D"width:100%"><p class=3D"last-child"><a =
+href=3D"https://mailchi.mp/4a235c85789a/otis-wrap-up?e=3D79c5af5b1f">View t=
+his email in your browser</a></p></div></td></tr></tbody></table></td></tr>=
+<tr><td style=3D"padding-top:12px;padding-bottom:12px;padding-right:0;paddi=
+ng-left:0" valign=3D"top" class=3D"mceImageBlockContainer" align=3D"center"=
+ id=3D"blockContainerId-2"><div><!--[if !mso]><!--></div><a href=3D"https:/=
+/evanchen.us5.list-manage.com/track/click?u=3D5c818a0be2f35ee90344a471e&id=
+=3Dd19cffc584&e=3D79c5af5b1f" style=3D"display:block" target=3D"_blank" dat=
+a-block-id=3D"2"><table align=3D"center" border=3D"0" cellpadding=3D"0" cel=
+lspacing=3D"0" width=3D"100%" style=3D"border-collapse:separate;margin:0;ve=
+rtical-align:top;max-width:279.75px;width:100%;height:auto" role=3D"present=
+ation" data-testid=3D"image-2"><tbody><tr><td style=3D"border:0;border-radi=
+us:0;margin:0" valign=3D"top"><img alt=3D"OTIS Logo" src=3D"https://mcuserc=
+ontent.com/5c818a0be2f35ee90344a471e/images/6c07977b-678b-ebde-d168-a4ced1d=
+6af94.png" width=3D"279.75" height=3D"auto" style=3D"display:block;max-widt=
+h:100%;height:auto;border-radius:0" class=3D"mceLogo" /></td></tr></tbody><=
+/table></a><div><!--<![endif]--></div><div>
+<!--[if mso]>
+<a href=3D"https://otis.evanchen.cc/"><span class=3D"mceImageBorder" style=
+=3D"border:0;vertical-align:top;margin:0"><img role=3D"presentation" class=
+=3D"mceLogo" src=3D"https://mcusercontent.com/5c818a0be2f35ee90344a471e/ima=
+ges/6c07977b-678b-ebde-d168-a4ced1d6af94.png" alt=3D"OTIS Logo" width=3D"27=
+9.75" height=3D"auto" style=3D"display:block;max-width:279.75px;width:279.7=
+5px;height:auto"/></span></a>
+<![endif]-->
+</div></td></tr></tbody></table></td></tr></tbody></table></td></tr></tbody=
+></table></td></tr></tbody></table><!--[if (gte mso 9)|(IE)]></td></tr></ta=
+ble><![endif]--></td></tr></tbody><tbody data-block-id=3D"10" class=3D"mceW=
+rapper"><tr><td style=3D"background-color:transparent" valign=3D"top" align=
+=3D"center" class=3D"mceSectionBody"><!--[if (gte mso 9)|(IE)]><table align=
+=3D"center" border=3D"0" cellspacing=3D"0" cellpadding=3D"0" width=3D"660" =
+style=3D"width:660px;"><tr><td><![endif]--><table border=3D"0" cellpadding=
+=3D"0" cellspacing=3D"0" width=3D"100%" style=3D"max-width:660px" role=3D"p=
+resentation"><tbody><tr><td style=3D"background-color:#ffffff" valign=3D"to=
+p" class=3D"mceWrapperInner"><table align=3D"center" border=3D"0" cellpaddi=
+ng=3D"0" cellspacing=3D"0" width=3D"100%" role=3D"presentation" data-block-=
+id=3D"9"><tbody><tr class=3D"mceRow"><td style=3D"background-position:cente=
+r;background-repeat:no-repeat;background-size:cover" valign=3D"top"><table =
+border=3D"0" cellpadding=3D"0" cellspacing=3D"0" width=3D"100%" role=3D"pre=
+sentation"><tbody><tr><td style=3D"padding-top:0;padding-bottom:0" valign=
+=3D"top" class=3D"mceColumn" data-block-id=3D"-8" colspan=3D"12" width=3D"1=
+00%"><table border=3D"0" cellpadding=3D"0" cellspacing=3D"0" width=3D"100%"=
+ role=3D"presentation"><tbody><tr><td style=3D"padding-top:0;padding-bottom=
+:0;padding-right:0;padding-left:0" valign=3D"top" id=3D"blockContainerId-5"=
+><table width=3D"100%" style=3D"border:0;border-radius:0;border-collapse:se=
+parate"><tbody><tr><td style=3D"padding-left:24px;padding-right:24px;paddin=
+g-top:12px;padding-bottom:12px" class=3D"mceTextBlockContainer"><div data-b=
+lock-id=3D"5" class=3D"mceText" id=3D"dataBlockId-5" style=3D"width:100%"><=
+h1>OTIS X Wrap-up</h1><p><br /></p><p class=3D"last-child">We=E2=80=99re wr=
+apping up a decade of OTIS now somehow. Feels a little surreal, but I don=
+=E2=80=99t think I=E2=80=99m dreaming.</p></div></td></tr></tbody></table><=
+/td></tr><tr><td style=3D"padding-top:12px;padding-bottom:12px;padding-righ=
+t:0;padding-left:0" valign=3D"top" class=3D"mceImageBlockContainer" align=
+=3D"center" id=3D"blockContainerId-20"><div><!--[if !mso]><!--></div><table=
+ align=3D"center" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" width=3D=
+"26%" style=3D"border-collapse:separate;margin:0;vertical-align:top;max-wid=
+th:26%;width:26%;height:auto" role=3D"presentation" data-testid=3D"image-20=
+"><tbody><tr><td style=3D"border:0;border-radius:0;margin:0" valign=3D"top"=
+><img alt=3D"" src=3D"https://mcusercontent.com/5c818a0be2f35ee90344a471e/i=
+mages/6420d02c-d148-215d-871b-269727d85347.png" width=3D"171.6" height=3D"a=
+uto" style=3D"display:block;max-width:100%;height:auto;border-radius:0" cla=
+ss=3D"imageDropZone mceImage" data-block-id=3D"20" /></td></tr></tbody></ta=
+ble><div><!--<![endif]--></div><div>
+<!--[if mso]>
+<span class=3D"mceImageBorder" style=3D"border:0;vertical-align:top;margin:=
+0"><img role=3D"presentation" class=3D"imageDropZone mceImage" src=3D"https=
+://mcusercontent.com/5c818a0be2f35ee90344a471e/images/6420d02c-d148-215d-87=
+1b-269727d85347.png" alt=3D"" width=3D"171.6" height=3D"auto" style=3D"disp=
+lay:block;max-width:171.6px;width:171.6px;height:auto"/></span>
+<![endif]-->
+</div></td></tr><tr><td style=3D"padding-top:0;padding-bottom:0;padding-rig=
+ht:0;padding-left:0" valign=3D"top" id=3D"blockContainerId-21"><table width=
+=3D"100%" style=3D"border:0;border-radius:0;border-collapse:separate"><tbod=
+y><tr><td style=3D"padding-left:24px;padding-right:24px;padding-top:12px;pa=
+dding-bottom:12px" class=3D"mceTextBlockContainer"><div data-block-id=3D"21=
+" class=3D"mceText" id=3D"dataBlockId-21" style=3D"width:100%"><h1 class=3D=
+"last-child">Closing date</h1></div></td></tr></tbody></table></td></tr><tr=
+><td style=3D"padding-top:0;padding-bottom:0;padding-right:0;padding-left:0=
+" valign=3D"top" id=3D"blockContainerId-19"><table width=3D"100%" style=3D"=
+border:0;border-radius:0;border-collapse:separate"><tbody><tr><td style=3D"=
+padding-left:24px;padding-right:24px;padding-top:12px;padding-bottom:12px" =
+class=3D"mceTextBlockContainer"><div data-block-id=3D"19" class=3D"mceText"=
+ id=3D"dataBlockId-19" style=3D"width:100%"><p>OTIS-WEB submissions will co=
+ntinue to be open until at least <strong>May 7, 2025 23:59 UTC</strong>, so=
+ if you want to get in any last minute submissions, do so now. Note that ch=
+eck-offs may be slower in the first week of May because Evan will be travel=
+ing. However, I guarantee to still (eventually) check off any problem sets =
+submitted on or before that date.</p><p><br /></p><p>After that, OTIS X wil=
+l officially be over and the website will move into summer mode. You should=
+ read section 8 of the syllabus for details on what that entails.</p><p><br=
+ /></p><p class=3D"last-child">If you want to request unit unlocks to work =
+on over the summer, now should be the time to do that as well. Same deadlin=
+e.</p></div></td></tr></tbody></table></td></tr><tr><td style=3D"padding-to=
+p:0;padding-bottom:0;padding-right:0;padding-left:0" valign=3D"top" id=3D"b=
+lockContainerId-17"><table width=3D"100%" style=3D"border:0;border-radius:0=
+;border-collapse:separate"><tbody><tr><td style=3D"padding-left:24px;paddin=
+g-right:24px;padding-top:12px;padding-bottom:12px" class=3D"mceTextBlockCon=
+tainer"><div data-block-id=3D"17" class=3D"mceText" id=3D"dataBlockId-17" s=
+tyle=3D"width:100%"><h1 class=3D"last-child">T-shirt reminder</h1></div></t=
+d></tr></tbody></table></td></tr><tr><td style=3D"padding-top:0;padding-bot=
+tom:0;padding-right:0;padding-left:0" valign=3D"top" id=3D"blockContainerId=
+-18"><table width=3D"100%" style=3D"border:0;border-radius:0;border-collaps=
+e:separate"><tbody><tr><td style=3D"padding-left:24px;padding-right:24px;pa=
+dding-top:12px;padding-bottom:12px" class=3D"mceTextBlockContainer"><div da=
+ta-block-id=3D"18" class=3D"mceText" id=3D"dataBlockId-18" style=3D"width:1=
+00%"><p class=3D"last-child">As a reminder, if you want to purchase the ama=
+zing Turbo-the-snail OTIS T-shirt, you need to do so by <strong>May 12</str=
+ong>. After that I will be placing the order and the shirts will move into =
+production.</p></div></td></tr></tbody></table></td></tr><tr><td style=3D"p=
+adding-top:12px;padding-bottom:12px;padding-right:24px;padding-left:24px" v=
+align=3D"top" class=3D"mceButtonBlockContainer" align=3D"center" id=3D"bloc=
+kContainerId-22"><div><!--[if !mso]><!--></div><table align=3D"center" bord=
+er=3D"0" cellpadding=3D"0" cellspacing=3D"0" role=3D"presentation" data-blo=
+ck-id=3D"22" class=3D"mceButtonContainer"><tbody><tr class=3D"mceStandardBu=
+tton"><td style=3D"background-color:#000000;border-radius:0;text-align:cent=
+er" valign=3D"top" class=3D"mceButton"><a href=3D"https://evanchen.us5.list=
+-manage.com/track/click?u=3D5c818a0be2f35ee90344a471e&id=3De163092a70&e=3D7=
+9c5af5b1f" target=3D"_blank" class=3D"mceButtonLink" style=3D"background-co=
+lor:#000000;border-radius:0;border:2px solid #000000;color:#ffffff;display:=
+block;font-family:'Helvetica Neue', Helvetica, Arial, Verdana, sans-serif;f=
+ont-size:16px;font-weight:normal;font-style:normal;padding:16px 28px;text-d=
+ecoration:none;min-width:30px;text-align:center;direction:ltr;letter-spacin=
+g:0px" rel=3D"noreferrer">Open T-shirt form</a></td></tr></tbody></table><d=
+iv><!--<![endif]--></div><table align=3D"center" border=3D"0" cellpadding=
+=3D"0" cellspacing=3D"0" role=3D"presentation" data-block-id=3D"22" class=
+=3D"mceButtonContainer"><tbody><tr>
+<!--[if mso]>
+<td align=3D"center">
+<v:roundrect xmlns:v=3D"urn:schemas-microsoft-com:vml"
+xmlns:w=3D"urn:schemas-microsoft-com:office:word"
+href=3D"https://forms.gle/54C51MntTQxhJur98"
+style=3D"v-text-anchor:middle; width:184.42000000000002px; height:55px;"
+arcsize=3D"0%"
+strokecolor=3D"#000000"
+strokeweight=3D"2px"
+fillcolor=3D"#000000">
+<v:stroke dashstyle=3D"solid"/>
+<w:anchorlock />
+<center style=3D"
+color: #ffffff;
+display: block;
+font-family: 'Helvetica Neue', Helvetica, Arial, Verdana, sans-serif;
+font-size: 16;
+font-style: normal;
+font-weight: normal;
+letter-spacing: 0px;
+text-decoration: none;
+text-align: center;
+direction: ltr;"
+>
+Open T-shirt form
+</center>
+</v:roundrect>
+</td>
+<![endif]-->
+</tr></tbody></table></td></tr><tr><td style=3D"padding-top:0;padding-botto=
+m:0;padding-right:0;padding-left:0" valign=3D"top" id=3D"blockContainerId-2=
+3"><table width=3D"100%" style=3D"border:0;border-radius:0;border-collapse:=
+separate"><tbody><tr><td style=3D"padding-left:24px;padding-right:24px;padd=
+ing-top:12px;padding-bottom:12px" class=3D"mceTextBlockContainer"><div data=
+-block-id=3D"23" class=3D"mceText" id=3D"dataBlockId-23" style=3D"width:100=
+%"><h1 class=3D"last-child">Survey 3</h1></div></td></tr></tbody></table></=
+td></tr><tr><td style=3D"padding-top:0;padding-bottom:0;padding-right:0;pad=
+ding-left:0" valign=3D"top" id=3D"blockContainerId-24"><table width=3D"100%=
+" style=3D"border:0;border-radius:0;border-collapse:separate"><tbody><tr><t=
+d style=3D"padding-left:24px;padding-right:24px;padding-top:12px;padding-bo=
+ttom:12px" class=3D"mceTextBlockContainer"><div data-block-id=3D"24" class=
+=3D"mceText" id=3D"dataBlockId-24" style=3D"width:100%"><p class=3D"last-ch=
+ild">The final OTIS survey is up now! This is where you can suggest all the=
+ changes you want to see for OTIS XI. Or just say thank-you. That=E2=80=99s=
+ appreciated too.</p></div></td></tr></tbody></table></td></tr><tr><td styl=
+e=3D"padding-top:12px;padding-bottom:12px;padding-right:24px;padding-left:2=
+4px" valign=3D"top" class=3D"mceButtonBlockContainer" align=3D"center" id=
+=3D"blockContainerId-25"><div><!--[if !mso]><!--></div><table align=3D"cent=
+er" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" role=3D"presentation" =
+data-block-id=3D"25" class=3D"mceButtonContainer"><tbody><tr class=3D"mceSt=
+andardButton"><td style=3D"background-color:#000000;border-radius:0;text-al=
+ign:center" valign=3D"top" class=3D"mceButton"><a href=3D"https://evanchen.=
+us5.list-manage.com/track/click?u=3D5c818a0be2f35ee90344a471e&id=3D7ce15af1=
+99&e=3D79c5af5b1f" target=3D"_blank" class=3D"mceButtonLink" style=3D"backg=
+round-color:#000000;border-radius:0;border:2px solid #000000;color:#ffffff;=
+display:block;font-family:'Helvetica Neue', Helvetica, Arial, Verdana, sans=
+-serif;font-size:16px;font-weight:normal;font-style:normal;padding:16px 28p=
+x;text-decoration:none;min-width:30px;text-align:center;direction:ltr;lette=
+r-spacing:0px" rel=3D"noreferrer">Open Survey 3</a></td></tr></tbody></tabl=
+e><div><!--<![endif]--></div><table align=3D"center" border=3D"0" cellpaddi=
+ng=3D"0" cellspacing=3D"0" role=3D"presentation" data-block-id=3D"25" class=
+=3D"mceButtonContainer"><tbody><tr>
+<!--[if mso]>
+<td align=3D"center">
+<v:roundrect xmlns:v=3D"urn:schemas-microsoft-com:vml"
+xmlns:w=3D"urn:schemas-microsoft-com:office:word"
+href=3D"https://forms.gle/eYXiSK2cqHBQfgWo7"
+style=3D"v-text-anchor:middle; width:166.55px; height:55px;"
+arcsize=3D"0%"
+strokecolor=3D"#000000"
+strokeweight=3D"2px"
+fillcolor=3D"#000000">
+<v:stroke dashstyle=3D"solid"/>
+<w:anchorlock />
+<center style=3D"
+color: #ffffff;
+display: block;
+font-family: 'Helvetica Neue', Helvetica, Arial, Verdana, sans-serif;
+font-size: 16;
+font-style: normal;
+font-weight: normal;
+letter-spacing: 0px;
+text-decoration: none;
+text-align: center;
+direction: ltr;"
+>
+Open Survey 3
+</center>
+</v:roundrect>
+</td>
+<![endif]-->
+</tr></tbody></table></td></tr><tr><td style=3D"padding-top:12px;padding-bo=
+ttom:12px;padding-right:0;padding-left:0" valign=3D"top" class=3D"mceLayout=
+Container" id=3D"blockContainerId-7"><table align=3D"center" border=3D"0" c=
+ellpadding=3D"0" cellspacing=3D"0" width=3D"100%" role=3D"presentation" dat=
+a-block-id=3D"7"><tbody><tr class=3D"mceRow"><td style=3D"background-positi=
+on:center;background-repeat:no-repeat;background-size:cover" valign=3D"top"=
+><table border=3D"0" cellpadding=3D"0" cellspacing=3D"24" width=3D"100%" ro=
+le=3D"presentation"><tbody><tr><td valign=3D"top" class=3D"mceColumn" data-=
+block-id=3D"-6" colspan=3D"12" width=3D"100%"><table border=3D"0" cellpaddi=
+ng=3D"0" cellspacing=3D"0" width=3D"100%" role=3D"presentation"><tbody><tr>=
+<td valign=3D"top" class=3D"mceSocialFollowBlockContainer" id=3D"blockConta=
+inerId--5"><table align=3D"center" border=3D"0" cellpadding=3D"0" cellspaci=
+ng=3D"0" role=3D"presentation" class=3D"mceSocialFollowBlock" data-block-id=
+=3D"-5"><tbody><tr><td valign=3D"middle" align=3D"center"><!--[if mso]><tab=
+le align=3D"left" border=3D"0" cellspacing=3D "0" cellpadding=3D"0"><tr><![=
+endif]--><!--[if mso]><td align=3D"center" valign=3D"top"><![endif]--><tabl=
+e align=3D"left" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" style=3D"=
+display:inline;float:left" role=3D"presentation"><tbody><tr><td style=3D"pa=
+dding-top:3px;padding-bottom:3px;padding-left:12px;padding-right:12px" vali=
+gn=3D"top" class=3D"mceSocialFollowIcon" align=3D"center" width=3D"40"><a h=
+ref=3D"https://evanchen.us5.list-manage.com/track/click?u=3D5c818a0be2f35ee=
+90344a471e&id=3D0c220e68cb&e=3D79c5af5b1f" target=3D"_blank" rel=3D"norefer=
+rer"><img class=3D"mceSocialFollowImage" width=3D"40" height=3D"40" alt=3D"=
+Instagram icon" src=3D"https://cdn-images.mailchimp.com/icons/social-block-=
+v3/block-icons-v3/instagram-filled-dark-40.png" /></a></td></tr></tbody></t=
+able><!--[if mso]></td><![endif]--><!--[if mso]><td align=3D"center" valign=
+=3D"top"><![endif]--><table align=3D"left" border=3D"0" cellpadding=3D"0" c=
+ellspacing=3D"0" style=3D"display:inline;float:left" role=3D"presentation">=
+<tbody><tr><td style=3D"padding-top:3px;padding-bottom:3px;padding-left:12p=
+x;padding-right:12px" valign=3D"top" class=3D"mceSocialFollowIcon" align=3D=
+"center" width=3D"40"><a href=3D"https://evanchen.us5.list-manage.com/track=
+/click?u=3D5c818a0be2f35ee90344a471e&id=3D7565832741&e=3D79c5af5b1f" target=
+=3D"_blank" rel=3D"noreferrer"><img class=3D"mceSocialFollowImage" width=3D=
+"40" height=3D"40" alt=3D"Website icon" src=3D"https://cdn-images.mailchimp=
+.com/icons/social-block-v3/block-icons-v3/website-filled-dark-40.png" /></a=
+></td></tr></tbody></table><!--[if mso]></td><![endif]--><!--[if mso]><td a=
+lign=3D"center" valign=3D"top"><![endif]--><table align=3D"left" border=3D"=
+0" cellpadding=3D"0" cellspacing=3D"0" style=3D"display:inline;float:left" =
+role=3D"presentation"><tbody><tr><td style=3D"padding-top:3px;padding-botto=
+m:3px;padding-left:12px;padding-right:12px" valign=3D"top" class=3D"mceSoci=
+alFollowIcon" align=3D"center" width=3D"40"><a href=3D"mailto:evan@evanchen=
+.cc" target=3D"_blank" rel=3D"noreferrer"><img class=3D"mceSocialFollowImag=
+e" width=3D"40" height=3D"40" alt=3D"Email icon" src=3D"https://cdn-images.=
+mailchimp.com/icons/social-block-v3/block-icons-v3/email-filled-dark-40.png=
+" /></a></td></tr></tbody></table><!--[if mso]></td><![endif]--><!--[if mso=
+]><td align=3D"center" valign=3D"top"><![endif]--><table align=3D"left" bor=
+der=3D"0" cellpadding=3D"0" cellspacing=3D"0" style=3D"display:inline;float=
+:left" role=3D"presentation"><tbody><tr><td style=3D"padding-top:3px;paddin=
+g-bottom:3px;padding-left:12px;padding-right:12px" valign=3D"top" class=3D"=
+mceSocialFollowIcon" align=3D"center" width=3D"40"><a href=3D"https://evanc=
+hen.us5.list-manage.com/track/click?u=3D5c818a0be2f35ee90344a471e&id=3Df551=
+8684f6&e=3D79c5af5b1f" target=3D"_blank" rel=3D"noreferrer"><img class=3D"m=
+ceSocialFollowImage" width=3D"40" height=3D"40" alt=3D"YouTube icon" src=3D=
+"https://cdn-images.mailchimp.com/icons/social-block-v3/block-icons-v3/yout=
+ube-filled-dark-40.png" /></a></td></tr></tbody></table><!--[if mso]></td><=
+![endif]--><!--[if mso]></tr></table><![endif]--></td></tr></tbody></table>=
+</td></tr></tbody></table></td></tr></tbody></table></td></tr></tbody></tab=
+le></td></tr><tr><td style=3D"background-color:transparent;padding-top:12px=
+;padding-bottom:12px;padding-right:24px;padding-left:24px" valign=3D"top" c=
+lass=3D"mceDividerBlockContainer" id=3D"blockContainerId-8"><table align=3D=
+"center" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" width=3D"100%" st=
+yle=3D"background-color:transparent;width:100%" role=3D"presentation" class=
+=3D"mceDividerContainer" data-block-id=3D"8"><tbody><tr><td style=3D"min-wi=
+dth:100%;border-top-width:2px;border-top-style:solid;border-top-color:#0000=
+00;line-height:0;font-size:0" valign=3D"top" class=3D"mceDividerBlock">=C2=
+=A0</td></tr></tbody></table></td></tr></tbody></table></td></tr></tbody></=
+table></td></tr></tbody></table></td></tr></tbody></table><!--[if (gte mso =
+9)|(IE)]></td></tr></table><![endif]--></td></tr></tbody><tbody data-block-=
+id=3D"15" class=3D"mceWrapper"><tr><td style=3D"background-color:transparen=
+t" valign=3D"top" align=3D"center" class=3D"mceSectionFooter"><!--[if (gte =
+mso 9)|(IE)]><table align=3D"center" border=3D"0" cellspacing=3D"0" cellpad=
+ding=3D"0" width=3D"660" style=3D"width:660px;"><tr><td><![endif]--><table =
+border=3D"0" cellpadding=3D"0" cellspacing=3D"0" width=3D"100%" style=3D"ma=
+x-width:660px" role=3D"presentation"><tbody><tr><td style=3D"background-col=
+or:#ffffff" valign=3D"top" class=3D"mceWrapperInner"><table align=3D"center=
+" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" width=3D"100%" role=3D"p=
+resentation" data-block-id=3D"14"><tbody><tr class=3D"mceRow"><td style=3D"=
+background-position:center;background-repeat:no-repeat;background-size:cove=
+r" valign=3D"top"><table border=3D"0" cellpadding=3D"0" cellspacing=3D"0" w=
+idth=3D"100%" role=3D"presentation"><tbody><tr><td style=3D"padding-top:0;p=
+adding-bottom:0" valign=3D"top" class=3D"mceColumn" data-block-id=3D"-9" co=
+lspan=3D"12" width=3D"100%"><table border=3D"0" cellpadding=3D"0" cellspaci=
+ng=3D"0" width=3D"100%" role=3D"presentation"><tbody><tr><td style=3D"paddi=
+ng-top:8px;padding-bottom:8px;padding-right:8px;padding-left:8px" valign=3D=
+"top" id=3D"blockContainerId-13"><table align=3D"center" border=3D"0" cellp=
+adding=3D"0" cellspacing=3D"0" width=3D"100%" role=3D"presentation" data-bl=
+ock-id=3D"13" id=3D"section_64f704ec73cf7f0aec0c6267c6b82f49" class=3D"mceF=
+ooterSection"><tbody><tr class=3D"mceRow"><td style=3D"background-position:=
+center;background-repeat:no-repeat;background-size:cover" valign=3D"top"><t=
+able border=3D"0" cellpadding=3D"0" cellspacing=3D"12" width=3D"100%" role=
+=3D"presentation"><tbody><tr><td style=3D"padding-top:0;padding-bottom:0" v=
+align=3D"top" class=3D"mceColumn" data-block-id=3D"-3" colspan=3D"12" width=
+=3D"100%"><table border=3D"0" cellpadding=3D"0" cellspacing=3D"0" width=3D"=
+100%" role=3D"presentation"><tbody><tr><td style=3D"padding-top:0;padding-b=
+ottom:0;padding-right:0;padding-left:0" valign=3D"top" align=3D"center" id=
+=3D"blockContainerId-12"><table width=3D"100%" style=3D"border:0;border-rad=
+ius:0;border-collapse:separate"><tbody><tr><td style=3D"padding-left:16px;p=
+adding-right:16px;padding-top:12px;padding-bottom:12px" class=3D"mceTextBlo=
+ckContainer"><div data-block-id=3D"12" class=3D"mceText" id=3D"dataBlockId-=
+12" style=3D"display:inline-block;width:100%"><p class=3D"last-child"><em>C=
+opyright (C) 2025 OTIS. All rights reserved.</em><br />
+You are receiving this email because you registered it on OTIS-WEB.
+<br /><br />Want to change how you receive these emails?<br />You can <a hr=
+ef=3D"https://evanchen.us5.list-manage.com/profile?u=3D5c818a0be2f35ee90344=
+a471e&id=3D808c50e8c9&e=3D79c5af5b1f&c=3D3801eda1ed">update your preference=
+s</a> or <a href=3D"https://evanchen.us5.list-manage.com/unsubscribe?u=3D5c=
+818a0be2f35ee90344a471e&id=3D808c50e8c9&t=3Db&e=3D79c5af5b1f&c=3D3801eda1ed=
+">unsubscribe</a><br /><br />
+ <a href=3D"https://login.mailchimp.com/signup/email-referral/?aid=3D5c818a=
+0be2f35ee90344a471e"><img src=3D"https://cdn-images.mailchimp.com/monkey_re=
+wards/intuit-mc-rewards-2.png" border=3D"0" alt=3D"Email Marketing Powered =
+by Mailchimp" title=3D"Mailchimp Email Marketing" width=3D"137" height=3D"5=
+3" style=3D"max-width: 100%; height: auto;"></a>
+</p></div></td></tr></tbody></table></td></tr><tr><td valign=3D"top" class=
+=3D"mceLayoutContainer" align=3D"center" id=3D"blockContainerId--2"><table =
+align=3D"center" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" width=3D"=
+100%" role=3D"presentation" data-block-id=3D"-2"><tbody><tr class=3D"mceRow=
+"><td style=3D"background-position:center;background-repeat:no-repeat;backg=
+round-size:cover;padding-top:0px;padding-bottom:0px" valign=3D"top"><table =
+border=3D"0" cellpadding=3D"0" cellspacing=3D"24" width=3D"100%" role=3D"pr=
+esentation"><tbody></tbody></table></td></tr></tbody></table></td></tr></tb=
+ody></table></td></tr></tbody></table></td></tr></tbody></table></td></tr><=
+/tbody></table></td></tr></tbody></table></td></tr></tbody></table></td></t=
+r></tbody></table><!--[if (gte mso 9)|(IE)]></td></tr></table><![endif]--><=
+/td></tr></tbody></table>
+</td>
+</tr>
+</tbody></table>
+</center>
+</body></html>
+--_----------=_MCPart_1817622299--
