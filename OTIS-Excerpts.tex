@@ -1,0 +1,37 @@
+\documentclass[paper=6.125in:9.25in,twoside,openright,pagesize=pdftex,10pt]{scrbook}
+%\includeonly{chapters/fundamentals-of-inequalities}
+
+\input{preamble.sty}
+
+\title{The OTIS Excerpts}
+\subtitle{A collection of 202 problems and solutions}
+\author{Evan Chen}
+\date{\today}
+
+\publishers{\includegraphics[width=7cm]{media/otis-logo-v2022-large.png} \\
+\url{web.evanchen.cc/excerpts.html}}
+
+\begin{document}
+\maketitle
+
+\frontmatter
+\include{src/titlepage}
+\include{src/preface}
+\include{src/intro}
+
+\mainmatter
+\tableofcontents
+\input{outputs/all-chapters.tex}
+
+%%fakepart Back matter
+\backmatter
+% \part{Backmatter}
+\renewcommand{\listtheoremname}{List of problems and examples}
+\renewcommand\indexname{Index of named problems}
+
+\listoftheorems[ignoreall,show={problem,example}]
+\printindex
+\printbibliography
+\include{src/acknow}
+
+\end{document}
